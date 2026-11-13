@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Visuels Play Store</title>
+<style>
+@font-face{font-family:Rubik;src:url(rubik.ttf);font-weight:300 900}
+@font-face{font-family:Lalezar;src:url(lalezar.ttf)}
+:root{--nuit:#15123A;--nuit2:#1E1A4E;--maj:#5B5CFF;--safran:#FFB938;--menthe:#6FE3B4;--grenade:#FF5C74;--lait:#F7F0E4;--muet:#C9C3EC}
+*{box-sizing:border-box}
+body{margin:0;background:#000;font-family:Rubik,sans-serif;color:var(--lait)}
+.capture{width:1080px;height:1920px;position:relative;overflow:hidden;background:var(--nuit)}
+.capture::before{content:"";position:absolute;inset:0;
+  background-image:radial-gradient(circle at 50% 50%,transparent 9px,rgba(120,116,220,.22) 10px,rgba(120,116,220,.22) 12px,transparent 13px);
+  background-size:68px 68px;mask-image:linear-gradient(180deg,#000 0%,rgba(0,0,0,.2) 55%,transparent 75%)}
+.capture .halo{position:absolute;width:1100px;height:1100px;border-radius:50%;left:-10px;top:520px;filter:blur(120px);opacity:.45}
+.legende{position:absolute;left:84px;right:84px;top:118px}
+.legende h2{margin:0;font-size:84px;line-height:1;font-weight:900;letter-spacing:-.025em}
+.legende p{margin:26px 0 0;font-size:38px;line-height:1.3;color:var(--muet);font-weight:400;max-width:860px}
+.tel{position:absolute;left:50%;top:520px;width:700px;transform:translateX(-50%);border-radius:78px;padding:16px;background:#0B0920;
+  box-shadow:0 0 0 3px #2E2970,0 60px 120px -30px rgba(0,0,0,.7)}
+.tel img{display:block;width:100%;border-radius:64px}
+.icone{width:512px;height:512px}
+.banniere{width:1024px;height:500px;position:relative;overflow:hidden;background:var(--nuit)}
+.banniere .photo{position:absolute;inset:0;background:url(terrasse.jpg) right center/cover}
+.banniere .voile{position:absolute;inset:0;background:linear-gradient(90deg,rgba(21,18,58,.98) 0%,rgba(21,18,58,.9) 40%,rgba(21,18,58,0) 74%)}
+.banniere .texte{position:absolute;left:64px;top:0;bottom:0;width:520px;display:flex;flex-direction:column;justify-content:center}
+.ar{font-family:Lalezar;color:var(--safran);direction:rtl;text-align:left;line-height:1}
+.banniere h1{margin:14px 0 0;font-size:84px;line-height:.92;font-weight:900;letter-spacing:-.03em}
+.banniere p{margin:20px 0 0;font-size:26px;line-height:1.3;color:#E3DEFF;max-width:440px}
+.banniere svg{position:absolute;right:36px;bottom:-64px;filter:drop-shadow(0 20px 30px rgba(0,0,0,.5))}
+</style>
+</head>
+<body>
+
+<div class="capture" id="s1"><div class="halo" style="background:#5B5CFF"></div>
+  <div class="legende"><h2>L'addition arrive. Qui paie ?</h2><p>Fini les « laisse, c'est pour moi ». Le sort tranche, en un geste.</p></div>
+  <div class="tel"><img src="accueil.png" alt=""></div></div>
+
+<div class="capture" id="s2"><div class="halo" style="background:#FFB938"></div>
+  <div class="legende"><h2>Lance la roue, elle décide.</h2><p>Jusqu'à 12 amis. Un tirage équitable, et l'aiguille claque à chaque case.</p></div>
+  <div class="tel"><img src="roue.png" alt=""></div></div>
+
+<div class="capture" id="s3"><div class="halo" style="background:#6FE3B4"></div>
+  <div class="legende"><h2>Ou réglez ça en duel.</h2><p>Le verre passe au vert : le plus lent régale toute la table.</p></div>
+  <div class="tel"><img src="duel.png" alt=""></div></div>
+
+<div class="capture" id="s4"><div class="halo" style="background:#FF5C74"></div>
+  <div class="legende"><h2>Le verdict, en story.</h2><p>Une carte prête à partager. Pas de réclamation possible.</p></div>
+  <div class="tel"><img src="verdict.png" alt=""></div></div>
+
+<div class="capture" id="s5"><div class="halo" style="background:#FFB938"></div>
+  <div class="legende"><h2>Ou partagez au dirham près.</h2><p>Montant, nombre de personnes, pourboire : chacun connaît sa part.</p></div>
+  <div class="tel"><img src="addition.png" alt=""></div></div>
+
+<div class="capture" id="s6"><div class="halo" style="background:#6FE3B4"></div>
+  <div class="legende"><h2>Combien tu as payé. Combien tu as épargné.</h2><p>Ton historique et ton bilan restent sur ton téléphone.</p></div>
+  <div class="tel"><img src="bilan.png" alt=""></div></div>
+
+<svg class="icone" id="icone" viewBox="0 0 108 108" xmlns="http://www.w3.org/2000/svg">
+  <rect width="108" height="108" fill="#15123A"/>
+  <g transform="translate(54 54) scale(1.32) translate(-54 -55)">
+  <g stroke="#15123A" stroke-width="1.4">
+    <path fill="#5B5CFF" d="M54,57 L54,30 A27,27 0 0,1 79.68,48.66 Z"/>
+    <path fill="#FFB938" d="M54,57 L79.68,48.66 A27,27 0 0,1 69.87,78.84 Z"/>
+    <path fill="#6FE3B4" d="M54,57 L69.87,78.84 A27,27 0 0,1 38.13,78.84 Z"/>
+    <path fill="#FF5C74" d="M54,57 L38.13,78.84 A27,27 0 0,1 28.32,48.66 Z"/>
+    <path fill="#F7F0E4" d="M54,57 L28.32,48.66 A27,27 0 0,1 54,30 Z"/>
+  </g>
+  <circle cx="54" cy="57" r="9" fill="#15123A" stroke="#FFB938" stroke-width="2.2"/>
+  <circle cx="54" cy="57" r="3.2" fill="#6FE3B4"/>
+  <path d="M48,22 L60,22 L54,33 Z" fill="#F7F0E4" stroke="#15123A" stroke-width="1.2"/>
+  </g>
+</svg>
+
+<div class="banniere" id="banniere">
+  <div class="photo"></div><div class="voile"></div>
+  <div class="texte">
+    <span class="ar" style="font-size:44px">شكون يخلّص؟</span>
+    <h1>Chkoun ykhelles ?</h1>
+    <p>La roue décide qui paie l'addition. Sans dispute.</p>
+  </div>
+  <svg width="230" height="230" viewBox="22 20 64 64" xmlns="http://www.w3.org/2000/svg">
+    <g stroke="#15123A" stroke-width="1.2">
+      <path fill="#5B5CFF" d="M54,57 L54,30 A27,27 0 0,1 79.68,48.66 Z"/>
+      <path fill="#FFB938" d="M54,57 L79.68,48.66 A27,27 0 0,1 69.87,78.84 Z"/>
+      <path fill="#6FE3B4" d="M54,57 L69.87,78.84 A27,27 0 0,1 38.13,78.84 Z"/>
+      <path fill="#FF5C74" d="M54,57 L38.13,78.84 A27,27 0 0,1 28.32,48.66 Z"/>
+      <path fill="#F7F0E4" d="M54,57 L28.32,48.66 A27,27 0 0,1 54,30 Z"/>
+    </g>
+    <circle cx="54" cy="57" r="9" fill="#15123A" stroke="#FFB938" stroke-width="2"/>
+    <circle cx="54" cy="57" r="3.2" fill="#6FE3B4"/>
+    <path d="M48,22 L60,22 L54,33 Z" fill="#F7F0E4" stroke="#15123A" stroke-width="1"/>
+  </svg>
+</div>
+</body>
+</html>
