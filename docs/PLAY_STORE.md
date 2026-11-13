@@ -41,7 +41,7 @@ Une appli NexPhase Group, faite à Casablanca.
 | `banniere-1024x500.png` | Image de présentation | 1024 × 500 |
 | `capture-1.png` à `capture-6.png` | Captures téléphone | 1080 × 1920 |
 
-Sources et rendu : `store/src/visuels.html` et `store/src/rendre.py` (Playwright local). La photo de terrasse est une image générée en local (FLUX), utilisée comme décor : elle ne représente aucun lieu réel.
+Sources et rendu : `store/src/visuels.html` et `store/src/rendre.py` (Playwright local). La photo de terrasse sert de décor : elle ne représente aucun lieu réel.
 
 ## Formulaires de la console
 - **Accès à l'appli** : tout est accessible sans connexion.
