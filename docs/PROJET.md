@@ -35,5 +35,6 @@ Voir `docs/DECISIONS.md`.
 
 ## État d'avancement
 - 13/11/2026 : maquette v1 validée (sauf l'étoile à 8 branches, retirée : connotation religieuse). App codée, testée sur émulateur (Android 14), version finale signée. Visuels du store prêts.
-- À faire : mettre en ligne la politique de confidentialité, créer la fiche dans la Play Console, envoyer l'AAB.
+- À faire : créer la fiche dans la Play Console, envoyer l'AAB.
 - 13/11/2026 : code publié sur GitHub, dépôt public https://github.com/dragnosii/chkoun-ykhelles
+- 13/11/2026 : politique de confidentialité en ligne sur https://nexphasegroup.ma/chkoun/confidentialite/ (mise à jour : pousser la branche site, puis redéployer le dépôt Git dans hPanel)

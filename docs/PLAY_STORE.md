@@ -7,7 +7,7 @@ Tout ce qu'il faut copier dans la Play Console (compte « NexPhase Group », org
 - **Identifiant** : `ma.nexphasegroup.chkoun` (définitif)
 - **Catégorie** : Divertissement
 - **Coordonnées** : contact@nexphasegroup.ma, https://nexphasegroup.ma/
-- **Politique de confidentialité** : à mettre en ligne depuis `store/confidentialite.html`, par exemple sur `https://nexphasegroup.ma/chkoun/confidentialite`
+- **Politique de confidentialité** : https://nexphasegroup.ma/chkoun/confidentialite/ (branche `site` du dépôt, déployée par Git Hostinger dans `public_html/chkoun`, Node.js désactivé pour ce dossier)
 
 ## Description courte (80 caractères max)
 Roue, duel ou partage : qui paie l'addition entre amis, sans dispute.
