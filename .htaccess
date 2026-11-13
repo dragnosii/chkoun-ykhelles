@@ -1,0 +1,8 @@
+# Pages statiques : ne pas passer par l application Node.js du site principal.
+PassengerEnabled off
+Options -Indexes
+DirectoryIndex index.html
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteRule ^\.git - [F,L]
+</IfModule>
