@@ -82,22 +82,45 @@ object DessinTicket {
         txt("Chkoun Ykhelles, une appli NexPhase Group", 398f, 12f, 400, 0xFF4A4570.toInt())
     }
 
+    /**
+     * Décor de nuit : fond bleu nuit, halos Majorelle, safran et menthe, grille de pièces qui s'efface vers le bas.
+     * `u` = taille d'un « dp » dans ce dessin.
+     */
+    fun decor(c: Canvas, w: Float, h: Float, u: Float) {
+        c.drawColor(C.NUIT)
+        val p = Paint(Paint.ANTI_ALIAS_FLAG)
+        fun halo(x: Float, y: Float, r: Float, couleur: Int) {
+            p.shader = android.graphics.RadialGradient(x, y, r, intArrayOf(couleur, couleur and 0x00FFFFFF), null, Shader.TileMode.CLAMP)
+            c.drawCircle(x, y, r, p)
+        }
+        halo(w * 0.15f, h * 0.12f, w * 0.85f, 0x805B5CFF.toInt())
+        halo(w * 0.95f, h * 0.62f, w * 0.75f, 0x55FFB938)
+        halo(w * 0.1f, h * 0.9f, w * 0.6f, 0x406FE3B4)
+        p.shader = null
+        p.style = Paint.Style.STROKE
+        p.strokeWidth = u
+        val pas = 34 * u
+        var y = pas / 2; var rang = 0
+        while (y < h) {
+            var x = pas / 2 + if (rang % 2 == 1) pas / 2 else 0f
+            val a = ((1f - y / h) * 70).toInt().coerceIn(10, 70)
+            p.color = 0xFF7874DC.toInt(); p.alpha = a
+            while (x < w + pas) {
+                c.drawCircle(x, y, 5 * u, p); c.drawCircle(x, y, 2.8f * u, p)
+                x += pas
+            }
+            y += pas; rang++
+        }
+        val voile = Paint().apply { shader = LinearGradient(0f, h * 0.55f, 0f, h, intArrayOf(0x0015123A, 0xE615123A.toInt()), null, Shader.TileMode.CLAMP) }
+        c.drawRect(0f, h * 0.55f, w, h, voile)
+    }
+
     /** Image 1080 x 1920 au format story, prête à partager. */
     fun image(ctx: Context, v: Verdict): Bitmap {
         val w = 1080; val h = 1920
         val bmp = Bitmap.createBitmap(w, h, Bitmap.Config.ARGB_8888)
         val c = Canvas(bmp)
-        c.drawColor(C.NUIT)
-        val photo = BitmapFactory.decodeResource(ctx.resources, R.drawable.terrasse)
-        if (photo != null) {
-            val ech = h.toFloat() / photo.height
-            val pw = photo.width * ech
-            val dx = (w - pw) * 0.62f
-            c.drawBitmap(photo, Rect(0, 0, photo.width, photo.height), RectF(dx, 0f, dx + pw, h.toFloat()), Paint(Paint.FILTER_BITMAP_FLAG))
-            photo.recycle()
-        }
-        val voile = Paint().apply { shader = LinearGradient(0f, 0f, 0f, h.toFloat(), intArrayOf(0x8C15123A.toInt(), 0x3315123A, 0xEB15123A.toInt()), floatArrayOf(0f, 0.4f, 0.8f), Shader.TileMode.CLAMP) }
-        c.drawRect(0f, 0f, w.toFloat(), h.toFloat(), voile)
+        decor(c, w.toFloat(), h.toFloat(), 3f)
         val lt = 820f
         c.save(); c.rotate(-3f, w / 2f, 760f)
         val ombre = Paint(Paint.ANTI_ALIAS_FLAG).apply { color = 0x66000000; maskFilter = android.graphics.BlurMaskFilter(60f, android.graphics.BlurMaskFilter.Blur.NORMAL) }
@@ -129,6 +152,12 @@ object DessinTicket {
         }
         ctx.startActivity(Intent.createChooser(envoi, "Partager le verdict").addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION))
     }
+}
+
+/** Fond du verdict : le même décor que l'image partagée. */
+class VueDecor(ctx: Context) : View(ctx) {
+    init { importantForAccessibility = IMPORTANT_FOR_ACCESSIBILITY_NO }
+    override fun onDraw(c: Canvas) = DessinTicket.decor(c, width.toFloat(), height.toFloat(), context.dp(1f))
 }
 
 /** Vue qui affiche le ticket, légèrement penché. */

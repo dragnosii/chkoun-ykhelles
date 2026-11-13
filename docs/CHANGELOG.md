@@ -4,3 +4,7 @@
 - Première version : roue, duel, secouer, verdict partageable, partage de l'addition, bilan et historique.
 - Animations : fond de pièces, titre vivant, roue au repos, ticket qui tombe, pluie de pièces, bilan qui se remplit.
 - Visuels du Play Store (icône, bannière, 6 captures) et politique de confidentialité.
+
+## 1.0.1 (13/11/2026)
+- Nouveau décor du verdict et de l'image partagée : fond de nuit, halos de couleur et pièces (plus de photo).
+- Nouvelle bannière du Play Store : la roue en grand.

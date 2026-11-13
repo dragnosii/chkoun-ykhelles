@@ -617,13 +617,7 @@ class SecoueEcran(private val groupe: List<String>) : Ecran(), SensorEventListen
 class VerdictEcran(private var soiree: Soiree) : Ecran() {
     override fun creer(a: MainActivity): View {
         val cadre = FrameLayout(a)
-        cadre.addView(ImageView(a).apply {
-            setImageResource(R.drawable.terrasse); scaleType = ImageView.ScaleType.CENTER_CROP
-            importantForAccessibility = View.IMPORTANT_FOR_ACCESSIBILITY_NO
-        }, FrameLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT))
-        cadre.addView(View(a).apply {
-            background = GradientDrawable(GradientDrawable.Orientation.TOP_BOTTOM, intArrayOf(0x8C15123A.toInt(), 0x4015123A, 0xF215123A.toInt(), C.NUIT))
-        }, FrameLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT))
+        cadre.addView(VueDecor(a), FrameLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT))
 
         val col = page(a)
         val haut = ligne(a)
