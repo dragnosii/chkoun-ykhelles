@@ -35,6 +35,8 @@ Voir `docs/DECISIONS.md`.
 
 ## État d'avancement
 - 13/11/2026 : maquette v1 validée (sauf l'étoile à 8 branches, retirée : connotation religieuse). App codée, testée sur émulateur (Android 14), version finale signée. Visuels du store prêts.
-- À faire : créer la fiche dans la Play Console, envoyer l'AAB.
+- Fiche Play Console créée et version 1.0.0 envoyée pour examen le 13/11/2026.
 - 13/11/2026 : code publié sur GitHub, dépôt public https://github.com/dragnosii/chkoun-ykhelles
 - 13/11/2026 : politique de confidentialité en ligne sur https://nexphasegroup.ma/chkoun/confidentialite/ (mise à jour : pousser la branche site, puis redéployer le dépôt Git dans hPanel)
+- 13/11/2026 : appli créée dans la Play Console (compte NexPhase Group), formulaires remplis (confidentialité, accès, annonces, public 18+, sécurité des données « aucune collecte », classification IARC, ID publicitaire, appli gouvernementale, finance, santé, statut pro), fiche (catégorie Divertissement, contact contact@nexphasegroup.ma, textes, icône, bannière, 6 captures ; bannière et capture du verdict déclarées « générées par IA »), 178 pays, AAB 1.0.0 envoyé pour examen. Publication automatique dès l'approbation (publication gérée désactivée).
+- À faire ensuite : suivre l'examen Google (1 à 7 jours) ; mettre la capture de l'accueil en premier dans la fiche ; une mise à jour par an au minimum pour garder le compte actif.
